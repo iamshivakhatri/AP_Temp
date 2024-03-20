@@ -1,0 +1,27 @@
+Some Vector stuff
+The following key vector functions may be useful to you
+1. The .front( ) method returns the value in the first position of the vector (if one exists).
+2. The .back( ) function returns the last value of the vector (if one exists)
+3. .begin( ) returns an iterator to the first item in the vector - useful for iterating/walking
+through the vector itself.
+4. .end( ) returns an iterator to the "past the end of the vector" position in the list - NOT the
+last element!!!
+5. .rbegin( ) returns a reverse iterator to the last element of the vector – useful if trying to
+iterate backwards through the vector.
+6. .rend( ) returns a reverse iterator to the position right before the first element of the
+vector – again, useful to iterate backwards through the vector.
+BE CAREFUL when iterating backwards using rbegin() and rend(). It is a common error to think
+that you should decrement your variable when, in fact, you still use an increment. See the
+following code for printing out the elements of a vector named v in reverse order from back to
+front.
+for (auto it = v.rbegin(); it != v.rend(); it++)
+cout << *it << " ";
+7. .insert( pos, item ) - takes two args. The first is a POSITION in the vector which is NOT an
+int but rather an iterator that points to a specific position. For example, to insert an item
+named say X into the first position of the list we would use something like
+elts.insert( elts.begin( ), X ) we would not pass say the int 0 as the position.
+8. .size( ) is a function that returns an integer count of the number of items currently in the
+vector.
+9. .empty( ) is a boolean function that returns true if the vector is empty or false if it is not.
+
+template<class T>
